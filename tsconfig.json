@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "esnext",
+		"jsx": "react",
+		"strict": true,
+		"noEmit": true,
+		"noImplicitReturns": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"baseUrl": ".",
+		"lib": [
+			"esnext",
+			"dom"
+		],
+		"importsNotUsedAsValues": "preserve",
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		},
+		"plugins": [
+			{
+				"name": "typescript-plugin-tw-template"
+			}
+		],
+		"typeRoots": [
+			"node_modules/@types"
+		]
+	},
+	"include": [
+		"src",
+		"types.d.ts"
+	],
+	"exclude": [
+		"/node_modules/"
+	]
+}
