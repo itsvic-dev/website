@@ -10,7 +10,7 @@ module.exports = {
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'build/assets'),
-		publicPath: 'assets/',
+		publicPath: '/assets/',
 		crossOriginLoading: 'anonymous'
 	},
 	mode: process.env.BUILD_MODE,
@@ -46,5 +46,11 @@ module.exports = {
 			'@': path.join(__dirname, 'src')
 		},
 		symlinks: false
+	},
+	devServer: {
+		contentBase: './public',
+		compress: true,
+		port: 9000,
+		historyApiFallback: true
 	}
 }
