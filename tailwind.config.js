@@ -11,7 +11,8 @@ module.exports = {
 					primary: '#2c2c39',
 					secondary: '#22222c',
 					tertiary: '#16161d'
-				}
+				},
+				link: '#2196F3'
 			},
 			maxWidth: {
 				container: '1366px'

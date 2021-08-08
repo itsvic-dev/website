@@ -6,13 +6,13 @@ import CyberOS from '@/assets/cyberos.webp'
 import StellaNode from '@/assets/stellanode.webp'
 import '@fontsource/rubik/300.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faGitAlt, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faDiscord, faGitAlt, faGithub, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 import Project from '@/components/Project'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faFolder, faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 const SocialLink = styled.a`
-	${tw`m-4`};
+	${tw`m-2 hover:text-gray-400 transition-colors duration-200 ease-in-out`};
 `
 
 const App = (): JSX.Element => {
@@ -28,7 +28,7 @@ const App = (): JSX.Element => {
 						</div>
 					</div>
 
-					<div css={tw`flex lg:flex-col text-4xl justify-center items-center pt-4 lg:pt-0`}>
+					<div css={tw`flex lg:flex-col text-2xl justify-center items-center pt-4 lg:pt-0`}>
 						<SocialLink href="https://twitter.com/omametech">
 							<FontAwesomeIcon icon={faTwitter} />
 						</SocialLink>
@@ -37,6 +37,12 @@ const App = (): JSX.Element => {
 						</SocialLink>
 						<SocialLink href="https://github.com/omaemae">
 							<FontAwesomeIcon icon={faGithub} />
+						</SocialLink>
+						<SocialLink href="https://dir.omame.tech">
+							<FontAwesomeIcon icon={faFolder} />
+						</SocialLink>
+						<SocialLink href="https://youtube.com/omame">
+							<FontAwesomeIcon icon={faYoutube} />
 						</SocialLink>
 					</div>
 				</div>
@@ -62,6 +68,9 @@ const App = (): JSX.Element => {
 						'https://twitter.com/stellanode': faTwitter,
 					}}
 				/>
+			</div>
+			<div css={tw`w-full bg-bgcolor-tertiary`}>
+				<p css={tw`text-center p-4 text-lg text-gray-300`}>&copy; 2021 | omame. <a css={tw`text-link hover:underline`} href="https://github.com/omaemae/website">Some Rights Reserved.</a></p>
 			</div>
 		</div>
 	)

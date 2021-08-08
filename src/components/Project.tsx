@@ -23,7 +23,7 @@ const Project = (props: ProjectProps): JSX.Element => {
 				</div>
 				<p css={tw`pt-8 text-3xl`}>
 					{Object.keys(props.links).map((link) => (
-						<a key={link} href={link} css={tw`m-2`}>
+						<a key={link} href={link} css={tw`m-2 hover:text-gray-400 transition-colors duration-200 ease-in-out`}>
 							<FontAwesomeIcon icon={props.links[link]} />
 						</a>
 					))}
