@@ -26,10 +26,10 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.(png|jp(e?)g|gif)$/,
+				test: /\.(webp|svg)$/,
 				loader: 'file-loader',
 				options: {
-					name: 'images/[name].[hash:8].[ext]'
+					name: 'images/[contenthash].[ext]'
 				}
 			},
 			{

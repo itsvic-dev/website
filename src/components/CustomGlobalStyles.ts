@@ -3,8 +3,7 @@ import tw from 'twin.macro'
 
 export default createGlobalStyle`
 	body {
-		${tw`w-full overflow-hidden dark:bg-gray-900 dark:text-white`};
-		height: 100vh;
+		${tw`w-full text-white bg-bgcolor-secondary`};
 	}
 
 	#root {

@@ -4,9 +4,19 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ['Rubik', 'sans-serif'],
-			mono: ['"JetBrains Mono"', 'monospace']
 		},
-		extend: {}
+		extend: {
+			colors: {
+				bgcolor: {
+					primary: '#2c2c39',
+					secondary: '#22222c',
+					tertiary: '#16161d'
+				}
+			},
+			maxWidth: {
+				container: '1366px'
+			}
+		}
 	},
 	variants: {
 		extend: {}
