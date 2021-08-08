@@ -28,7 +28,7 @@ const App = (): JSX.Element => {
 						</div>
 					</div>
 
-					<div css={tw`flex lg:flex-col text-2xl justify-center items-center pt-4 lg:pt-0`}>
+					<div css={tw`flex lg:flex-col text-3xl justify-center items-center pt-4 lg:pt-0`}>
 						<SocialLink href="https://twitter.com/omametech">
 							<FontAwesomeIcon icon={faTwitter} />
 						</SocialLink>
