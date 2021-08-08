@@ -12,11 +12,11 @@ export type ProjectProps = {
 
 const Project = (props: ProjectProps): JSX.Element => {
 	return (
-		<div css={tw`shadow-xl m-8 p-8 bg-bgcolor-primary rounded-2xl flex flex-col lg:flex-row w-full`}>
+		<div css={tw`shadow-xl m-8 p-8 bg-bgcolor-primary rounded-2xl flex flex-col lg:flex-row w-full justify-start`}>
 			<a href={props.image}>
-				<img src={props.image} css={tw`w-full lg:w-auto lg:h-72 rounded-xl shadow-md`}/>
+				<img src={props.image} css={tw`w-full lg:w-96 rounded-xl shadow-md`}/>
 			</a>
-			<div css={tw`text-center lg:text-left pt-8 lg:pt-0 lg:pl-8 flex flex-col justify-between`}>
+			<div css={tw`text-center lg:text-left pt-8 lg:pt-0 lg:pl-8 flex flex-col justify-between lg:w-2/3`}>
 				<div>
 					<p css={tw`text-4xl font-light`}>{props.name}</p>
 					<p css={tw`text-xl pt-4`}>{props.description}</p>

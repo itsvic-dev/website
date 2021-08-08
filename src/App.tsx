@@ -3,9 +3,10 @@ import tw from 'twin.macro'
 import omame from '@/assets/icon.webp'
 import zzz from '@/assets/1f4a4.svg'
 import CyberOS from '@/assets/cyberos.webp'
+import StellaNode from '@/assets/stellanode.webp'
 import '@fontsource/rubik/300.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faDiscord, faGitAlt, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 import Project from '@/components/Project'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
@@ -45,10 +46,20 @@ const App = (): JSX.Element => {
 				<Project
 					name="CyberOS"
 					image={CyberOS}
-					description="CyberOS is a Linux distribution based on Arch Linux and Qt Quick."
+					description="CyberOS is a Linux distribution based on Arch Linux and Qt Quick. I'm a maintainer of the project."
 					links={{
 						'https://getcyberos.org': faGlobe,
-						'https://twitter.com/CyberOS_Linux': faTwitter
+						'https://twitter.com/CyberOS_Linux': faTwitter,
+						'https://git.omame.tech/CyberOS': faGitAlt
+					}}
+				/>
+				<Project
+					name="StellaNode"
+					image={StellaNode}
+					description="I'm a software developer at StellaNode. I've created their unique website and panel. I also do support for some of their products."
+					links={{
+						'https://stellanode.com': faGlobe,
+						'https://twitter.com/stellanode': faTwitter,
 					}}
 				/>
 			</div>
