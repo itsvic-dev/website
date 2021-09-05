@@ -3,13 +3,13 @@ import tw from 'twin.macro'
 import omame from '@/assets/icon.webp'
 import zzz from '@/assets/1f4a4.svg'
 import CyberOS from '@/assets/cyberos.webp'
-import StellaNode from '@/assets/stellanode.webp'
 import '@fontsource/rubik/300.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faGitAlt, faGithub, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faGitAlt, faGithub, faGuilded, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 import Project from '@/components/Project'
 import { faFolder, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import Available from '@/components/Available'
 
 const SocialLink = styled.a`
 	${tw`m-2 hover:text-gray-400 transition-colors duration-200 ease-in-out`};
@@ -32,13 +32,13 @@ const App = (): JSX.Element => {
 						<SocialLink href="https://twitter.com/omametech">
 							<FontAwesomeIcon icon={faTwitter} />
 						</SocialLink>
-						<SocialLink href="https://discord.gg/WSMyh5fdUg">
-							<FontAwesomeIcon icon={faDiscord} />
+						<SocialLink href="https://guilded.gg/omame-regime">
+							<FontAwesomeIcon icon={faGuilded} />
 						</SocialLink>
 						<SocialLink href="https://github.com/omaemae">
 							<FontAwesomeIcon icon={faGithub} />
 						</SocialLink>
-						<SocialLink href="https://dir.omame.tech">
+						<SocialLink href="https://dir.omame.xyz">
 							<FontAwesomeIcon icon={faFolder} />
 						</SocialLink>
 						<SocialLink href="https://youtube.com/omame">
@@ -59,15 +59,8 @@ const App = (): JSX.Element => {
 						'https://git.omame.tech/CyberOS': faGitAlt
 					}}
 				/>
-				<Project
-					name="StellaNode"
-					image={StellaNode}
-					description="I'm a software developer at StellaNode. I've created their unique website and panel. I also do support for some of their products."
-					links={{
-						'https://stellanode.com': faGlobe,
-						'https://twitter.com/stellanode': faTwitter,
-					}}
-				/>
+
+				<Available available={true}/>
 			</div>
 			<div css={tw`w-full bg-bgcolor-tertiary`}>
 				<p css={tw`text-center p-4 text-lg text-gray-300`}>&copy; 2021 | omame. <a css={tw`text-link hover:underline`} href="https://github.com/omaemae/website">Some Rights Reserved.</a></p>
