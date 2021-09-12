@@ -13,9 +13,9 @@ const Available = (props: AvailableProps): JSX.Element | null => {
 			<p css={tw`text-5xl font-light text-center`}>currently available for hire!</p>
 			<div css={tw`text-lg`}>
 				<p css={tw`pt-8`}>if you are interested in my work and would like to offer me something to work with, 
-				please <a css={tw`text-link hover:underline`} href="mailto:me@omame.xyz">email me</a> or DM me on Guilded.</p>
+				please <a css={tw`text-link hover:underline`} href="mailto:me@omame.xyz">email me</a> or DM me on Discord.</p>
 
-				<p css={tw`pt-4`}>I am a frontend and backend developer, and I am fluent in Python and TypeScript.</p>
+				<p css={tw`pt-4`}>I am a frontend and backend developer, and I know how to work with Python (Flask/aiohttp) and TypeScript (React Web), but I&apos;m always up to take a challenge.</p>
 			</div>
 		</div>
 	)

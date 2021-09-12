@@ -5,10 +5,10 @@ import zzz from '@/assets/1f4a4.svg'
 import CyberOS from '@/assets/cyberos.webp'
 import '@fontsource/rubik/300.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGitAlt, faGithub, faGuilded, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faDiscord, faGitAlt, faGithub, faGitlab, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 import Project from '@/components/Project'
-import { faFolder, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faFolder, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import Available from '@/components/Available'
 
 const SocialLink = styled.a`
@@ -18,7 +18,7 @@ const SocialLink = styled.a`
 const App = (): JSX.Element => {
 	return (
 		<div css={tw`w-full flex flex-col items-center`}>
-			<div css={tw`w-full flex flex-col items-center p-16 max-w-container`}>
+			<div css={tw`w-full flex flex-col items-center p-8 max-w-container`}>
 				<div css={tw`w-full flex justify-between flex-col lg:flex-row`}>
 					<div css={tw`flex flex-col lg:flex-row items-center`}>
 						<img src={omame} css={tw`rounded-full w-64 h-auto shadow-lg`}/>
@@ -28,22 +28,32 @@ const App = (): JSX.Element => {
 						</div>
 					</div>
 
-					<div css={tw`flex lg:flex-col text-3xl justify-center items-center pt-4 lg:pt-0`}>
-						<SocialLink href="https://twitter.com/omametech">
-							<FontAwesomeIcon icon={faTwitter} />
-						</SocialLink>
-						<SocialLink href="https://guilded.gg/omame-regime">
-							<FontAwesomeIcon icon={faGuilded} />
-						</SocialLink>
-						<SocialLink href="https://github.com/omaemae">
-							<FontAwesomeIcon icon={faGithub} />
-						</SocialLink>
-						<SocialLink href="https://dir.omame.xyz">
-							<FontAwesomeIcon icon={faFolder} />
-						</SocialLink>
-						<SocialLink href="https://youtube.com/omame">
-							<FontAwesomeIcon icon={faYoutube} />
-						</SocialLink>
+					<div css={tw`flex flex-col lg:flex-row text-3xl justify-center items-center pt-4 lg:pt-0`}>
+						<div css={tw`flex lg:flex-col text-3xl justify-center items-center`}>
+							<SocialLink href="https://gitlab.com/omaemae">
+								<FontAwesomeIcon icon={faGitlab} />
+							</SocialLink>
+							<SocialLink href="https://dir.omame.xyz">
+								<FontAwesomeIcon icon={faFolder} />
+							</SocialLink>
+						</div>
+						<div css={tw`flex lg:flex-col text-3xl justify-center items-center lg:ml-4`}>
+							<SocialLink href="https://twitter.com/omametech">
+								<FontAwesomeIcon icon={faTwitter} />
+							</SocialLink>
+							<SocialLink href="https://discord.gg/WSMyh5fdUg">
+								<FontAwesomeIcon icon={faDiscord} />
+							</SocialLink>
+							<SocialLink href="https://github.com/omaemae">
+								<FontAwesomeIcon icon={faGithub} />
+							</SocialLink>
+							<SocialLink href="https://youtube.com/omame">
+								<FontAwesomeIcon icon={faYoutube} />
+							</SocialLink>
+							<SocialLink href="mailto:me@omame.xyz">
+								<FontAwesomeIcon icon={faEnvelope} />
+							</SocialLink>
+						</div>
 					</div>
 				</div>
 
