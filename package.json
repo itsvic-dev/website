@@ -9,7 +9,8 @@
     "build": "yarn clean && cp -r public build && BUILD_MODE=development webpack",
     "build:production": "yarn lint && yarn clean && cp -r public build && BUILD_MODE=production webpack",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "lint:fix": "eslint src --fix",
+    "deploy": "yarn build:production && rsync -a --progress --usermap omame:http build/. vps:/var/www/mainsite/"
   },
   "dependencies": {
     "@babel/core": "^7.14.0",
