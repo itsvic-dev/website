@@ -2,7 +2,7 @@
   "name": "omame-website",
   "version": "1.0.0",
   "author": "omame",
-  "license": "GPL3",
+  "license": "GPL-3.0",
   "scripts": {
     "clean": "rm -r build",
     "start": "NODE_ENV=development webpack serve --open",
