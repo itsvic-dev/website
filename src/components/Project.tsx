@@ -31,7 +31,7 @@ const Project = (props: ProjectProps): JSX.Element => {
 	return (
 		<div css={tw`shadow-xl m-8 p-8 bg-bgcolor-primary rounded-2xl flex flex-col lg:flex-row w-full justify-start`}>
 			<a rel="noreferrer" target="_blank" href={props.image}>
-				<img src={props.image} css={tw`w-full lg:w-96 rounded-xl shadow-md`}/>
+				<img src={props.image} css={tw`w-full lg:w-96 rounded-xl shadow-md border-2 border-gray-400`}/>
 			</a>
 			<div css={tw`text-center lg:text-left pt-8 lg:pt-0 lg:pl-8 flex flex-col justify-between lg:w-2/3`}>
 				<div>
