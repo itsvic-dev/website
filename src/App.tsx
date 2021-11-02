@@ -39,10 +39,10 @@ const App = (): JSX.Element => {
 			<div css={tw`w-full flex flex-col items-center p-8 max-w-container`}>
 				<div css={tw`w-full flex justify-between flex-col lg:flex-row pt-16`}>
 					<div css={tw`flex flex-col lg:flex-row items-center`}>
-						<img src={omame} css={tw`rounded-full w-64 h-auto shadow-lg`}/>
+						<img src={omame} css={tw`rounded-full w-64 h-auto shadow-lg`} alt="my avatar" />
 						<div css={tw`lg:ml-16 text-center lg:text-left`}>
 							<h1 css={tw`text-6xl font-light pt-8 lg:pt-0`}>omame</h1>
-							<h3 css={tw`text-2xl pt-4`}>just a sleepy kot <img src={zzz} css={tw`inline-block w-8 ml-2 h-auto`}/></h3>
+							<p css={tw`text-2xl pt-4`}>programmer by day, sleepy kot by night <img src={zzz} css={tw`inline-block w-8 ml-2 h-auto`} alt="sleeping emoji"/></p>
 						</div>
 					</div>
 
