@@ -15,13 +15,18 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-module.exports = {
-    twin: {
-        preset: 'styled-components',
-    },
-    styledComponents: {
-        pure: true,
-        displayName: false,
-        fileName: false,
-    },
-};
+import React from 'react'
+import tw from 'twin.macro'
+
+const PteroMarketButton = (props: { id: string }): JSX.Element => {
+	return (
+		<a css={[
+			tw`inline-block px-4 py-2 rounded-lg border border-gray-400 hover:text-white! text-base font-normal`,
+			{ backgroundImage: 'linear-gradient(to right,#ff6161,#fe6a4e,#f9743b,#f18025,#e68c04)' }
+		]} href={`https://pterodactylmarket.com/resource/${props.id}`} target="_blank" rel="noreferrer">
+			Get it on <strong css={tw`font-bold`}>Pterodactyl Market</strong>
+		</a>
+	)
+}
+
+export default PteroMarketButton

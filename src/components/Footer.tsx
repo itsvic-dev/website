@@ -15,13 +15,15 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-module.exports = {
-    twin: {
-        preset: 'styled-components',
-    },
-    styledComponents: {
-        pure: true,
-        displayName: false,
-        fileName: false,
-    },
-};
+import React from 'react'
+import tw from 'twin.macro'
+
+const Footer = (): JSX.Element => {
+	return (
+		<footer css={tw`w-full`}>
+			<p css={tw`text-center p-4 text-lg text-gray-300`}>&copy; 2021 | omame. <a css={tw`text-link hover:underline`} href="https://github.com/omaemae/website">Some Rights Reserved.</a></p>
+		</footer>
+	)
+}
+
+export default Footer

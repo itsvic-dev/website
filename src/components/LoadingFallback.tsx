@@ -15,13 +15,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-module.exports = {
-    twin: {
-        preset: 'styled-components',
-    },
-    styledComponents: {
-        pure: true,
-        displayName: false,
-        fileName: false,
-    },
-};
+import React from 'react'
+import tw from 'twin.macro'
+
+const LoadingFallback = (): JSX.Element => {
+	return (
+		<div css={tw`absolute top-0 left-0 w-screen h-screen bg-bgcolor-secondary flex flex-col justify-center items-center gap-4`}>
+			<h1 css={tw`text-6xl`}>Loading...</h1>
+			<h2 css={tw`text-2xl`}>Please wait...</h2>
+		</div>
+	)
+}
+
+export default LoadingFallback

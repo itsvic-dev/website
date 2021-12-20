@@ -15,13 +15,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-module.exports = {
-    twin: {
-        preset: 'styled-components',
-    },
-    styledComponents: {
-        pure: true,
-        displayName: false,
-        fileName: false,
-    },
-};
+import styled from 'styled-components'
+import tw from 'twin.macro'
+
+const ButtonLinkContainer = styled.div`
+	${tw`text-xl flex flex-wrap gap-4 justify-center`};
+
+	& > a {
+		${tw`inline-block px-6 py-4 bg-bgcolor-tertiary border border-gray-600 rounded-lg transition-all duration-200 ease-in-out`};
+		${tw`hover:(bg-bgcolor-primary border-gray-500 shadow-xl)`};
+	}
+`
+
+export default ButtonLinkContainer

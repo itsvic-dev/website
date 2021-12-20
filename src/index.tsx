@@ -20,6 +20,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { GlobalStyles } from 'twin.macro'
 import '@fontsource/rubik'
+import '@fontsource/rubik/300.css'
 import CustomGlobalStyles from '@/components/CustomGlobalStyles'
 
 render(
