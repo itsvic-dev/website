@@ -28,10 +28,10 @@ const ProjectsIndex = (): JSX.Element => (
 	<PageWrapper title="projects" styleChildren={false}>
 		<div css={tw`flex flex-wrap gap-4 justify-center`}>
 			<Link to="professional">
-				<div css={tw`flex flex-col gap-2 justify-center items-center text-gray-300 bg-gray-700 border border-gray-500
-				hover:(text-gray-100 bg-gray-600 border-gray-400 shadow-xl) shadow-md w-72 h-32 rounded-xl transition-colors duration-200 ease-in-out`}>
+				<div css={tw`flex flex-col justify-center items-center text-gray-600 bg-gray-200 border border-white
+				hover:(text-gray-800 bg-gray-100 shadow-xl) shadow-md w-72 h-32 rounded-xl transition-colors duration-200 ease-in-out`}>
+					<p>omame&apos;s</p>
 					<p css={tw`text-3xl font-medium`}>Professional</p>
-					<p>a Pterodactyl theme</p>
 				</div>
 			</Link>
 		</div>

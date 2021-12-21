@@ -29,6 +29,7 @@ import DesktopLightFiles from '@/assets/themes/professional/desktop/light/files.
 import DesktopLightLogin from '@/assets/themes/professional/desktop/light/login.webp'
 import DesktopLightNetwork from '@/assets/themes/professional/desktop/light/network.webp'
 import DesktopLightPassword from '@/assets/themes/professional/desktop/light/password.webp'
+import DesktopLightRegister from '@/assets/themes/professional/desktop/light/register.webp'
 import DesktopLightSchedules from '@/assets/themes/professional/desktop/light/schedules.webp'
 import DesktopLightSettings from '@/assets/themes/professional/desktop/light/settings.webp'
 import DesktopLightStartup from '@/assets/themes/professional/desktop/light/startup.webp'
@@ -43,6 +44,7 @@ import DesktopDarkFiles from '@/assets/themes/professional/desktop/dark/files.we
 import DesktopDarkLogin from '@/assets/themes/professional/desktop/dark/login.webp'
 import DesktopDarkNetwork from '@/assets/themes/professional/desktop/dark/network.webp'
 import DesktopDarkPassword from '@/assets/themes/professional/desktop/dark/password.webp'
+import DesktopDarkRegister from '@/assets/themes/professional/desktop/dark/register.webp'
 import DesktopDarkSchedules from '@/assets/themes/professional/desktop/dark/schedules.webp'
 import DesktopDarkSettings from '@/assets/themes/professional/desktop/dark/settings.webp'
 import DesktopDarkStartup from '@/assets/themes/professional/desktop/dark/startup.webp'
@@ -54,6 +56,7 @@ import PteroMarketButton from '@/components/PteroMarketButton'
 const getImagesAndLabels = (darkMode: boolean): { [label: string]: string } => ({
 	'Login': darkMode ? DesktopDarkLogin : DesktopLightLogin,
 	'Forgot Password': darkMode ? DesktopDarkPassword : DesktopLightPassword,
+	'Register': darkMode ? DesktopDarkRegister : DesktopLightRegister,
 	'Dashboard': darkMode ? DesktopDarkDashboard : DesktopLightDashboard,
 	'Account Settings': darkMode ? DesktopDarkAccount : DesktopLightAccount,
 	'Server Console': darkMode ? DesktopDarkConsole : DesktopLightConsole,
