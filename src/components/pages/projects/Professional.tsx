@@ -50,6 +50,8 @@ import DesktopDarkSettings from '@/assets/themes/professional/desktop/dark/setti
 import DesktopDarkStartup from '@/assets/themes/professional/desktop/dark/startup.webp'
 import DesktopDarkUsers from '@/assets/themes/professional/desktop/dark/users.webp'
 
+import DesktopAdminTheme from '@/assets/themes/professional/desktop/theme.webp'
+
 import '@fontsource/rubik/700.css'
 import PteroMarketButton from '@/components/PteroMarketButton'
 
@@ -68,6 +70,7 @@ const getImagesAndLabels = (darkMode: boolean): { [label: string]: string } => (
 	'Server Network': darkMode ? DesktopDarkNetwork : DesktopLightNetwork,
 	'Server Startup': darkMode ? DesktopDarkStartup : DesktopLightStartup,
 	'Server Settings': darkMode ? DesktopDarkSettings : DesktopLightSettings,
+	'Theme Settings in Admin Panel': DesktopAdminTheme,
 })
 
 const Professional = (): JSX.Element => {
