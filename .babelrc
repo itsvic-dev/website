@@ -10,7 +10,11 @@
 	],
 	"plugins": [
 		"babel-plugin-macros",
-		"styled-components",
+		["styled-components", {
+			"pure": true,
+        	"displayName": false,
+        	"fileName": false
+		}],
 		"@babel/transform-runtime",
 		"@babel/transform-react-jsx",
 		"@babel/syntax-dynamic-import"

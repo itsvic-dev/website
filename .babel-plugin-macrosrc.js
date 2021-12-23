@@ -18,10 +18,6 @@
 module.exports = {
     twin: {
         preset: 'styled-components',
-    },
-    styledComponents: {
-        pure: true,
-        displayName: false,
-        fileName: false,
-    },
+        dataTwProp: false,
+    }
 };
