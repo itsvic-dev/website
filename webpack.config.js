@@ -60,12 +60,19 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.json'],
 		alias: {
-			'@': path.join(__dirname, 'src')
+			'@': path.join(__dirname, 'src'),
+			'react': 'preact/compat',
+			'react-dom/test-utils': 'preact/test-utils',
+			'react-dom': 'preact/compat',
+			'react/jsx-runtime': 'preact/jsx-runtime'
 		},
 		symlinks: false
 	},
+	devtool: 'source-map',
 	devServer: {
-		contentBase: './public',
+		static: {
+			directory: path.join(__dirname, 'public')
+		},
 		compress: true,
 		port: 9000,
 		historyApiFallback: true

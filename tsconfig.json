@@ -10,6 +10,7 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"sourceMap": true,
+		"skipLibCheck": true,
 		"baseUrl": ".",
 		"lib": [
 			"esnext",

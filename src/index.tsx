@@ -17,7 +17,7 @@
 
 import App from '@/App'
 import React from 'react'
-import { render } from 'react-dom'
+import { render } from 'preact'
 import { GlobalStyles } from 'twin.macro'
 import '@fontsource/rubik'
 import '@fontsource/rubik/300.css'
@@ -29,5 +29,6 @@ render(
 		<CustomGlobalStyles />
 		<App />
 	</>,
-	document.getElementById('root')
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+	document.getElementById('root')!
 )
