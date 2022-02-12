@@ -31,6 +31,7 @@ import DesktopLightNetwork from '@/assets/themes/professional/desktop/light/netw
 import DesktopLightPassword from '@/assets/themes/professional/desktop/light/password.webp'
 import DesktopLightRegister from '@/assets/themes/professional/desktop/light/register.webp'
 import DesktopLightSchedules from '@/assets/themes/professional/desktop/light/schedules.webp'
+import DesktopLightScheduleTasks from '@/assets/themes/professional/desktop/light/schedule_tasks.webp'
 import DesktopLightSettings from '@/assets/themes/professional/desktop/light/settings.webp'
 import DesktopLightStartup from '@/assets/themes/professional/desktop/light/startup.webp'
 import DesktopLightUsers from '@/assets/themes/professional/desktop/light/users.webp'
@@ -46,6 +47,7 @@ import DesktopDarkNetwork from '@/assets/themes/professional/desktop/dark/networ
 import DesktopDarkPassword from '@/assets/themes/professional/desktop/dark/password.webp'
 import DesktopDarkRegister from '@/assets/themes/professional/desktop/dark/register.webp'
 import DesktopDarkSchedules from '@/assets/themes/professional/desktop/dark/schedules.webp'
+import DesktopDarkScheduleTasks from '@/assets/themes/professional/desktop/dark/schedule_tasks.webp'
 import DesktopDarkSettings from '@/assets/themes/professional/desktop/dark/settings.webp'
 import DesktopDarkStartup from '@/assets/themes/professional/desktop/dark/startup.webp'
 import DesktopDarkUsers from '@/assets/themes/professional/desktop/dark/users.webp'
@@ -65,8 +67,9 @@ const getImagesAndLabels = (darkMode: boolean): { [label: string]: string } => (
 	'Server File Manager': darkMode ? DesktopDarkFiles : DesktopLightFiles,
 	'Server Databases (cannot be created for this server)': darkMode ? DesktopDarkDatabases : DesktopLightDatabases,
 	'Server Schedules': darkMode ? DesktopDarkSchedules : DesktopLightSchedules,
+	'Server Schedule View': darkMode ? DesktopDarkScheduleTasks : DesktopLightScheduleTasks,
 	'Server Users (empty)': darkMode ? DesktopDarkUsers : DesktopLightUsers,
-	'Server Backups (empty)': darkMode ? DesktopDarkBackups : DesktopLightBackups,
+	'Server Backups': darkMode ? DesktopDarkBackups : DesktopLightBackups,
 	'Server Network': darkMode ? DesktopDarkNetwork : DesktopLightNetwork,
 	'Server Startup': darkMode ? DesktopDarkStartup : DesktopLightStartup,
 	'Server Settings': darkMode ? DesktopDarkSettings : DesktopLightSettings,
