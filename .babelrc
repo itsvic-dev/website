@@ -1,22 +1,12 @@
 {
 	"presets": [
-		"@babel/preset-typescript",
-		["@babel/preset-env", {
-			"modules": false,
-			"useBuiltIns": "entry",
-			"corejs": 3
-		}],
-		"@babel/preset-react"
+		"@babel/preset-env",
+		"@babel/preset-typescript"
 	],
 	"plugins": [
-		"babel-plugin-macros",
-		["styled-components", {
-			"pure": true,
-        	"displayName": false,
-        	"fileName": false
-		}],
-		"@babel/transform-runtime",
-		"@babel/transform-react-jsx",
-		"@babel/syntax-dynamic-import"
+		"macros",
+		"styled-components",
+		["@babel/plugin-transform-react-jsx", { "runtime": "automatic", "importSource": "preact" }],
+		"@babel/plugin-transform-runtime"
 	]
 }

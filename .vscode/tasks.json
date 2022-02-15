@@ -3,10 +3,10 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "start",
+			"script": "dev",
 			"problemMatcher": [],
-			"label": "npm: start",
-			"detail": "NODE_ENV=development webpack serve --open",
+			"label": "npm: dev",
+			"detail": "webpack serve --open --mode development",
 			"group": {
 				"kind": "build",
 				"isDefault": true
