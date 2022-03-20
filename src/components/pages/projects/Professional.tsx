@@ -1,5 +1,5 @@
 /*  omame's website
- *  Copyright (C) 2021 omame <me@omame.xyz>
+ *  Copyright (C) 2022 omame <me@omame.xyz>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -65,7 +65,7 @@ const getImagesAndLabels = (darkMode: boolean): { [label: string]: string } => (
 	'Account Settings': darkMode ? DesktopDarkAccount : DesktopLightAccount,
 	'Server Console': darkMode ? DesktopDarkConsole : DesktopLightConsole,
 	'Server File Manager': darkMode ? DesktopDarkFiles : DesktopLightFiles,
-	'Server Databases (cannot be created for this server)': darkMode ? DesktopDarkDatabases : DesktopLightDatabases,
+	'Server Databases': darkMode ? DesktopDarkDatabases : DesktopLightDatabases,
 	'Server Schedules': darkMode ? DesktopDarkSchedules : DesktopLightSchedules,
 	'Server Schedule View': darkMode ? DesktopDarkScheduleTasks : DesktopLightScheduleTasks,
 	'Server Users (empty)': darkMode ? DesktopDarkUsers : DesktopLightUsers,

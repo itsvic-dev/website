@@ -1,5 +1,5 @@
 /*  omame's website
- *  Copyright (C) 2021 omame <me@omame.xyz>
+ *  Copyright (C) 2022 omame <me@omame.xyz>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,7 +28,8 @@ module.exports = {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'build/assets'),
 		publicPath: '/assets/',
-		crossOriginLoading: 'anonymous'
+		crossOriginLoading: 'anonymous',
+		assetModuleFilename: 'images/[contenthash].[ext]',
 	},
 	mode: process.env.BUILD_MODE,
 	module: {
@@ -43,18 +44,9 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.(webp|svg)$/,
-				loader: 'file-loader',
-				options: {
-					name: 'images/[contenthash].[ext]'
-				}
+				test: /\.(webp|svg|woff|woff2)$/,
+				type: 'asset/resource',
 			},
-			{
-				test: /\.(woff|woff2)$/,
-				use: {
-					loader: 'url-loader'
-				}
-			}
 		]
 	},
 	resolve: {

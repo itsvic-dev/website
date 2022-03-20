@@ -1,5 +1,5 @@
 /*  omame's website
- *  Copyright (C) 2021 omame <me@omame.xyz>
+ *  Copyright (C) 2022 omame <me@omame.xyz>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ import tw from 'twin.macro'
 const Footer = (): JSX.Element => {
 	return (
 		<footer css={tw`w-full`}>
-			<p css={tw`text-center p-4 text-lg text-gray-300`}>&copy; 2021 | omame. <a css={tw`text-link hover:underline`} href="https://github.com/omaemae/website">Some Rights Reserved.</a></p>
+			<p css={tw`text-center p-4 text-lg text-gray-300`}>&copy; {new Date().getFullYear()} | omame. <a css={tw`text-link hover:underline`} href="https://github.com/omaemae/website">Some Rights Reserved.</a></p>
 		</footer>
 	)
 }
