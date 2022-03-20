@@ -10,7 +10,7 @@
     "build:production": "yarn lint && yarn clean && cp -r public build && BUILD_MODE=production webpack",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "deploy": "ssh vps rm -rf /var/www/mainsite/assets && yarn build:production && rsync -a --progress --usermap omame:http build/. vps:/var/www/mainsite/"
+    "deploy": "ssh omame.xyz rm -rf /var/www/mainsite/assets && yarn build:production && rsync -a --progress --usermap omame:http build/. omame.xyz:/var/www/mainsite/"
   },
   "dependencies": {
     "@babel/core": "^7.16.7",

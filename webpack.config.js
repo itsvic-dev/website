@@ -29,7 +29,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'build/assets'),
 		publicPath: '/assets/',
 		crossOriginLoading: 'anonymous',
-		assetModuleFilename: 'images/[contenthash].[ext]',
+		assetModuleFilename: 'images/[contenthash][ext]',
 	},
 	mode: process.env.BUILD_MODE,
 	module: {
