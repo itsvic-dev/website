@@ -1,95 +1,78 @@
+import { useEffect, useState } from 'preact/hooks'
 import Icon from '@/assets/icon.webp'
-import DesignPreview from '@/components/DesignPreview'
-import RollingText from '@/components/RollingText'
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import WebInfo from '@/webinfo.json'
 
-// Logos and previews
-import StellanodeLogo from '@/assets/logos/stellanode.svg'
-import StellanodePreview from '@/assets/previews/stellanode.webp'
+const introString = 'about --me'
 
-import PterodactylMarketLogo from '@/assets/logos/pterodactylmarket.webp'
-
-import ProfessionalPreview from '@/assets/previews/professional.webp'
-
-import NoPreview from '@/assets/previews/noPreview.webp'
+const age =
+	new Date(
+		new Date().getTime() - new Date(2005, 5, 23).getTime()
+	).getFullYear() - 1970
 
 const Index = () => {
+	const [introProgress, setIntroProgress] = useState(0)
+	const [enter, setEnter] = useState(false)
+
+	useEffect(() => {
+		setTimeout(() => {
+			if (introProgress != introString.length) {
+				setIntroProgress(introProgress + 1)
+			} else if (introProgress == introString.length) {
+				setTimeout(() => setEnter(true), 150)
+			}
+		}, 75)
+	}, [introProgress])
+
 	return (
-		<>
-			<div class="bg-gradient-to-b from-slate-900 to-slate-800 min-w-screen min-h-screen">
-				<div class="absolute top-0 left-0 w-full min-h-screen overflow-hidden flex justify-center items-center pointer-events-none">
-					<div class="relative -top-32 -left-20 w-40 h-40 bg-blue-400 shadow-xl shadow-blue-400/20 rounded-xl -rotate-12"></div>
-					<div class="relative -top-16 left-16 w-32 h-32 bg-rose-400 shadow-xl shadow-rose-400/20 rounded-full -rotate-12"></div>
-				</div>
-				<div class="absolute top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center gap-12">
-					<div class="flex flex-col gap-6">
-						<h2 class="text-3xl text-center">Hi, I&apos;m</h2>
-						<div class="relative flex gap-4 items-center p-4 rounded-full backdrop-blur-lg bg-slate-800/50 border border-slate-700 shadow-xl">
-							<img
-								alt="omame's avatar"
-								src={Icon}
-								class="w-16 h-16 rounded-full"
-							/>
-							<h1 class="text-5xl font-semibold">omame</h1>
-						</div>
-						<h2 class="text-2xl text-center">and I&apos;m...</h2>
-					</div>
-					<RollingText />
-					<button
-						onClick={() =>
-							document
-								.querySelector('#section2')
-								?.scrollIntoView({ behavior: 'smooth' })
-						}
-					>
-						Scroll down
-						<ChevronDownIcon />
-					</button>
-				</div>
+		<div class="flex flex-col w-full h-screen overflow-hidden">
+			<div class="p-4 flex gap-1">
+				<p class="whitespace-pre">
+					<span class="text-blue-400 font-bold">omame</span>@omame.xyz{' '}
+					<strong>~</strong> % {introString.substring(0, introProgress)}
+				</p>
+				{!enter && (
+					<div class="w-[0.75em] h-[1.5em] bg-white/50 animate-pulse"></div>
+				)}
 			</div>
-			<div class="bg-slate-800">
-				<div id="section2" class="section">
-					<h1 class="text-4xl font-semibold">
-						Professional-grade software and design.
-					</h1>
-					<p>
-						My software has been trusted and used in production by many
-						start-ups, companies, open-source organisations and people.
-					</p>
-					<div class="flex flex-wrap gap-12 justify-center mt-4">
-						<DesignPreview
-							thumbnail={StellanodePreview}
-							logo={StellanodeLogo}
-							text="Stellanode"
-							description="Helped with website as well as panel development."
-							link="https://stellanode.com"
-						/>
-						<DesignPreview
-							thumbnail={NoPreview}
-							logo={PterodactylMarketLogo}
-							text="Pterodactyl Market"
-							description="Working on the new version of the website and backend."
-							link="https://pterodactylmarket.com"
-						/>
-						<DesignPreview
-							thumbnail={ProfessionalPreview}
-							text="Professional theme"
-							description="Clean, visually attractive yet easy to use theme for Pterodactyl."
-							link="https://pterodactylmarket.com/resource/350"
-						/>
-						<DesignPreview
-							thumbnail={NoPreview}
-							text="Impulse"
-							description="A work-in-progress chat platform, currently developed and tested in private."
-							link="https://impulse.chat"
-						/>
+			{enter && (
+				<div class="animate-fadein bg-gradient-to-b from-transparent to-rose-800/20 h-full flex-1 p-4 flex gap-8">
+					<img src={Icon} class="w-64 h-64" />
+					<div>
 						<p>
-							<strong>todo:</strong> put more projects here
+							<span class="text-rose-400 font-bold">omame</span>@
+							<span class="text-rose-400 font-bold">omame.xyz</span>
+						</p>
+						<p>---------------</p>
+						<p>
+							<span class="text-rose-400 font-bold">Uptime</span>: {age} years
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Gender</span>: Male (he/him)
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Sexuality</span>: Gay
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Relationship status</span>:
+							Taken
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Commissions</span>:{' '}
+							{WebInfo.commissions ? 'Open' : 'Closed'}
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">E-mail</span>:{' '}
+							<a
+								href="mailto:me@omame.xyz"
+								class="text-blue-400 font-bold underline"
+							>
+								me@omame.xyz
+							</a>
 						</p>
 					</div>
 				</div>
-			</div>
-		</>
+			)}
+		</div>
 	)
 }
 

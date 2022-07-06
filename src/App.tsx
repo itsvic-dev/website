@@ -2,14 +2,14 @@ import Fallback from '@/components/Fallback'
 import { Suspense } from 'preact/compat'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import '@/styles/app.scss'
-import IndexNew from '@/pages/IndexNew'
+import Index from '@/pages/Index'
 
 const App = () => (
 	<>
 		<BrowserRouter>
 			<Suspense fallback={<Fallback />}>
 				<Routes>
-					<Route path="/" element={<IndexNew />} />
+					<Route path="/" element={<Index />} />
 				</Routes>
 			</Suspense>
 		</BrowserRouter>
