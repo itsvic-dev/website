@@ -1,5 +1,4 @@
 dist/
-node_modules/
 yarn-*.log
 
 ### VisualStudioCode ###
@@ -17,3 +16,11 @@ yarn-*.log
 # Ignore all local history of files
 .history
 .ionide
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

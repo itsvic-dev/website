@@ -7,7 +7,7 @@ const commonConfig: webpack.Configuration = {
 	entry: './src/main.tsx',
 	output: {
 		path: path.resolve(__dirname, '../..', 'dist'),
-		filename: 'assets/[id].bundle.js',
+		filename: 'js/[id].bundle.js',
 		assetModuleFilename: 'assets/[hash][ext][query]',
 	},
 	module: {
@@ -20,11 +20,11 @@ const commonConfig: webpack.Configuration = {
 				},
 			},
 			{
-				test: /\.css$/i,
-				use: ['style-loader', 'css-loader'],
+				test: /\.s?css$/i,
+				use: ['style-loader', 'css-loader', 'postcss-loader'],
 			},
 			{
-				test: /\.(webp|woff2)$/i,
+				test: /\.(webp|svg|woff2)$/i,
 				type: 'asset/resource',
 			},
 		],

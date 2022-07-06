@@ -4,8 +4,6 @@
 		"@babel/preset-typescript"
 	],
 	"plugins": [
-		"macros",
-		"styled-components",
 		["@babel/plugin-transform-react-jsx", { "runtime": "automatic", "importSource": "preact" }],
 		"@babel/plugin-transform-runtime"
 	]
