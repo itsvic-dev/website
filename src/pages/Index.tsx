@@ -35,7 +35,7 @@ const Index = () => {
 				)}
 			</div>
 			{enter && (
-				<div class="animate-fadein bg-gradient-to-b from-transparent to-rose-800/20 h-full flex-1 p-4 flex gap-8">
+				<div class="animate-fadein bg-gradient-to-b from-transparent to-rose-800/20 h-full flex-1 p-4 flex gap-8 flex-col md:flex-row items-center md:items-start text-center md:text-left">
 					<img src={Icon} class="w-64 h-64" />
 					<div>
 						<p>
@@ -44,10 +44,13 @@ const Index = () => {
 						</p>
 						<p>---------------</p>
 						<p>
-							<span class="text-rose-400 font-bold">Uptime</span>: {age} years
+							<span class="text-rose-400 font-bold">Age</span>: {age} years
 						</p>
 						<p>
 							<span class="text-rose-400 font-bold">Gender</span>: Male (he/him)
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Nationality</span>: Poland
 						</p>
 						<p>
 							<span class="text-rose-400 font-bold">Sexuality</span>: Gay
@@ -68,6 +71,29 @@ const Index = () => {
 							>
 								me@omame.xyz
 							</a>
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Twitter</span>:{' '}
+							<a
+								class="text-blue-400 font-bold underline"
+								href="https://twitter.com/omametech"
+								rel="noreferrer noopener"
+								target="_blank"
+							>
+								@omametech
+							</a>
+						</p>
+						<p>
+							<span class="text-rose-400 font-bold">Discord</span>:{' '}
+							<a
+								class="text-blue-400 font-bold underline"
+								href="https://discord.gg/WSMyh5fdUg"
+								rel="noreferrer noopener"
+								target="_blank"
+							>
+								discord.gg/WSMyh5fdUg
+							</a>{' '}
+							(omame#7818)
 						</p>
 					</div>
 				</div>

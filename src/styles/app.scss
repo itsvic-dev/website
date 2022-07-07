@@ -4,5 +4,5 @@
 @import "@fontsource/jetbrains-mono/variable.css";
 
 body {
-    @apply bg-zinc-900 text-white;
+    @apply bg-zinc-900 text-white print:text-black;
 }
