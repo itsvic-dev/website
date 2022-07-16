@@ -21,6 +21,8 @@ import tw from 'twin.macro'
 import Switch from '@/components/Switch'
 
 import DesktopLightAccount from '@/assets/themes/professional/desktop/light/account.webp'
+import DesktopLightAPI from '@/assets/themes/professional/desktop/light/api.webp'
+import DesktopLightSSH from '@/assets/themes/professional/desktop/light/ssh.webp'
 import DesktopLightBackups from '@/assets/themes/professional/desktop/light/backups.webp'
 import DesktopLightConsole from '@/assets/themes/professional/desktop/light/console.webp'
 import DesktopLightDashboard from '@/assets/themes/professional/desktop/light/dashboard.webp'
@@ -35,8 +37,11 @@ import DesktopLightScheduleTasks from '@/assets/themes/professional/desktop/ligh
 import DesktopLightSettings from '@/assets/themes/professional/desktop/light/settings.webp'
 import DesktopLightStartup from '@/assets/themes/professional/desktop/light/startup.webp'
 import DesktopLightUsers from '@/assets/themes/professional/desktop/light/users.webp'
+import DesktopLightActivity from '@/assets/themes/professional/desktop/light/activity.webp'
 
 import DesktopDarkAccount from '@/assets/themes/professional/desktop/dark/account.webp'
+import DesktopDarkAPI from '@/assets/themes/professional/desktop/dark/api.webp'
+import DesktopDarkSSH from '@/assets/themes/professional/desktop/dark/ssh.webp'
 import DesktopDarkBackups from '@/assets/themes/professional/desktop/dark/backups.webp'
 import DesktopDarkConsole from '@/assets/themes/professional/desktop/dark/console.webp'
 import DesktopDarkDashboard from '@/assets/themes/professional/desktop/dark/dashboard.webp'
@@ -51,6 +56,7 @@ import DesktopDarkScheduleTasks from '@/assets/themes/professional/desktop/dark/
 import DesktopDarkSettings from '@/assets/themes/professional/desktop/dark/settings.webp'
 import DesktopDarkStartup from '@/assets/themes/professional/desktop/dark/startup.webp'
 import DesktopDarkUsers from '@/assets/themes/professional/desktop/dark/users.webp'
+import DesktopDarkActivity from '@/assets/themes/professional/desktop/dark/activity.webp'
 
 import DesktopAdminTheme from '@/assets/themes/professional/desktop/theme.webp'
 
@@ -63,16 +69,19 @@ const getImagesAndLabels = (darkMode: boolean): { [label: string]: string } => (
 	'Register': darkMode ? DesktopDarkRegister : DesktopLightRegister,
 	'Dashboard': darkMode ? DesktopDarkDashboard : DesktopLightDashboard,
 	'Account Settings': darkMode ? DesktopDarkAccount : DesktopLightAccount,
+	'Account API': darkMode ? DesktopDarkAPI : DesktopLightAPI,
+	'Account SSH Keys': darkMode ? DesktopDarkSSH : DesktopLightSSH,
 	'Server Console': darkMode ? DesktopDarkConsole : DesktopLightConsole,
 	'Server File Manager': darkMode ? DesktopDarkFiles : DesktopLightFiles,
 	'Server Databases': darkMode ? DesktopDarkDatabases : DesktopLightDatabases,
 	'Server Schedules': darkMode ? DesktopDarkSchedules : DesktopLightSchedules,
 	'Server Schedule View': darkMode ? DesktopDarkScheduleTasks : DesktopLightScheduleTasks,
-	'Server Users (empty)': darkMode ? DesktopDarkUsers : DesktopLightUsers,
+	'Server Users': darkMode ? DesktopDarkUsers : DesktopLightUsers,
 	'Server Backups': darkMode ? DesktopDarkBackups : DesktopLightBackups,
 	'Server Network': darkMode ? DesktopDarkNetwork : DesktopLightNetwork,
 	'Server Startup': darkMode ? DesktopDarkStartup : DesktopLightStartup,
 	'Server Settings': darkMode ? DesktopDarkSettings : DesktopLightSettings,
+	'Server Activity': darkMode ? DesktopDarkActivity : DesktopLightActivity,
 	'Theme Settings in Admin Panel': DesktopAdminTheme,
 })
 
