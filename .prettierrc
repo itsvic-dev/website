@@ -1,5 +1,8 @@
 {
 	"semi": false,
 	"singleQuote": true,
-	"useTabs": true
+	"useTabs": true,
+	"plugins": [
+		"tailwindcss"
+	]
 }
