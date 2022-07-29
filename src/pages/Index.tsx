@@ -2,6 +2,7 @@ import Avatar from '@/assets/avatar_new.webp'
 import WebInfo from '@/webinfo.json'
 import CommandFadeIn from '@/components/CommandFadeIn'
 import Neofetch from '@/components/Neofetch'
+import NavButton from '@/components/NavButton'
 
 const age =
 	new Date(
@@ -59,6 +60,10 @@ const Index = () => {
 					),
 				}}
 			/>
+			<div class="flex w-full flex-wrap gap-4">
+				<NavButton to="projects">Projects</NavButton>
+				<NavButton to="projects">Commissions</NavButton>
+			</div>
 		</CommandFadeIn>
 	)
 }

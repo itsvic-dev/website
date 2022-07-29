@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@fontsource/jetbrains-mono/variable.css";
+@import '@fontsource/jetbrains-mono/variable.css';
 
 body {
-    @apply bg-zinc-900 text-white print:text-black;
+	@apply bg-zinc-900 text-white print:text-black;
 }
